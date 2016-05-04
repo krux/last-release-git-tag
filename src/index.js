@@ -9,7 +9,7 @@ module.exports = function (pluginConfig, config, cb) {
                   .trim()
                   .split('\n')
                   .map(tag => tag.trim().replace(/^release\//, 'v'))
-                  .filter(semver.valid)
+                  .filter(tag => semver.valid(tag))
                   // semantic-release always puts a v in front.
                   .filter(tag => tag.charAt(0) === 'v')
                   .sort(semver.compare)
