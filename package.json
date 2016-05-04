@@ -1,6 +1,6 @@
 {
   "name": "@krux/last-release-git-tag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Determine the version of the last release with git tags",
   "author": "Ari Porad <npm@ariporad.com> (http://github.com/ariporad)",
   "bugs": {

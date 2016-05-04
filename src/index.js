@@ -8,7 +8,7 @@ module.exports = function (pluginConfig, config, cb) {
     const tags = stdout
                   .trim()
                   .split('\n')
-                  .map(tag => tag.trim())
+                  .map(tag => tag.trim().replace(/^release\//, 'v'))
                   .filter(semver.valid)
                   // semantic-release always puts a v in front.
                   .filter(tag => tag.charAt(0) === 'v')
